@@ -1,6 +1,0 @@
-# Created at 2022-06-28T10:53:28.719
-Corrupted channel by directly writing to native stream in forked JVM 1. Stream '6mI search for [0m[36m[1m"BBC"[0m           [90m# uk.co.edgewords.StepDefs2.i_search_for(java.lang.String)[0m'.
-
-# Created at 2022-06-28T10:53:28.723
-Corrupted channel by directly writing to native stream in forked JVM 1. Stream '  [36mThen [0m[36m[0m[36m[1m"BBC"[0m[36m appears in the results[0m [90m# uk.co.edgewords.StepDefinitions.edgewords_appears_in_the_results(java.lang.String)[0m'.
-
