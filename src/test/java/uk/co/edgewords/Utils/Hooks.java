@@ -28,13 +28,12 @@ public class Hooks {
     public void SetUp() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        sharedDict.addDict("webdriver",driver);
-        Thread.sleep(1000);
+        sharedDict.addDict("webdriver",driver); //Add driver to shared dict for use in other classes
+
     }
 
     @After("@Gui")
-    public void TearDown(){
-        WebDriver shareddriver = (WebDriver)sharedDict.readDict("webdriver");
-        shareddriver.quit();
+    public void TearDown() throws InterruptedException {
+        driver.quit();
     }
 }

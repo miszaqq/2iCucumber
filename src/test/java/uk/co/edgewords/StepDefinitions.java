@@ -23,32 +23,26 @@ import static org.hamcrest.CoreMatchers.*;
 
 public class StepDefinitions {
 
-    private static WebDriver driver;
-    private SharedDictionary sharedDict; //Field for shared dictonary to use in this class
+    private WebDriver driver;
+    private final SharedDictionary sharedDict; //Field for shared dictonary to use in this class
 
     public StepDefinitions(SharedDictionary sharedDict) { //PicoContainer will instantiate sharedDict for us
-        driver = (WebDriver)sharedDict.readDict("webdriver");
         this.sharedDict = sharedDict; //Put the passed instance of sharedDict in the field.
+        driver = (WebDriver)sharedDict.readDict("webdriver");
+
     }
 
-    @Then("^(?i)i am on the (?-i)Google homepage$") //Case insesitivity using RegEx
+    //@Then("^(?i)i am on the (?-i)Google homepage$") //Case insesitivity using RegEx
     @Then("I am on Google") //Multiple annotations for alternative phrasings
     public void i_am_on_the_google_homepage() throws InterruptedException {
 
         driver.get("https://www.google.co.uk");
-        try{
-            driver.findElement(By.cssSelector("#L2AGLb > div")).click();
+        var iAgrees = driver.findElements(By.cssSelector("#L2AGLb > div"));
+        if(!iAgrees.isEmpty()){
+            iAgrees.get(0).click();
         }
-        catch(Error e){
-            //Do nothing
-            //blah
-            //blah
-            //blah
-            //blah
 
 
-
-        }
 
 
         Thread.sleep(1000);
