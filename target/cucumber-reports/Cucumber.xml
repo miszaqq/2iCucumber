@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="17.092">
-    <testcase classname="Google Search" name="Search for edgewords" time="9.107">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="7" time="19.866">
+    <testcase classname="Google Search" name="Search for edgewords" time="18.041">
         <system-out>
             <![CDATA[Given I am on Google........................................................passed
 When I search for "Edgewords"...............................................passed
@@ -8,7 +8,47 @@ Then 'Edgewords' appears in the results.....................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Google Search" name="Verify Edgewords results" time="7.677">
+    <testcase classname="Google Search" name="Data Drive search" time="17.63">
+        <system-out>
+            <![CDATA[Given I am on Google........................................................passed
+When I search for "Edgewords"...............................................passed
+Then "Edgewords" appears in the results.....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Google Search" name="Data Drive search 2" time="17.67">
+        <system-out>
+            <![CDATA[Given I am on Google........................................................passed
+When I search for "BBC".....................................................passed
+Then "BBC" appears in the results...........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Google Search" name="Data Drive search 3" time="17.89">
+        <system-out>
+            <![CDATA[Given I am on Google........................................................passed
+When I search for "Onet"....................................................passed
+Then "Onet" appears in the results..........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Google Search" name="Data Drive search 4" time="17.897">
+        <system-out>
+            <![CDATA[Given I am on Google........................................................passed
+When I search for "gazeta"..................................................passed
+Then "gazeta" appears in the results........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Google Search" name="Data Drive search 5" time="19.006">
+        <system-out>
+            <![CDATA[Given I am on Google........................................................passed
+When I search for "apple"...................................................passed
+Then "apple" appears in the results.........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Google Search" name="Verify Edgewords results" time="17.98">
         <system-out>
             <![CDATA[Given I am on Google........................................................passed
 When I search for "Edgewords"...............................................passed

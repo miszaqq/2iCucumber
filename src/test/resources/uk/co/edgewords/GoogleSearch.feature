@@ -19,6 +19,7 @@ Feature: Google Search
       | Onet        |
       | gazeta      |
       | apple       |
+      | google      |
 
   Scenario: Verify Edgewords results
     Given I am on Google

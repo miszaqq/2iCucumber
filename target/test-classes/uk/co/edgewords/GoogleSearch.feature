@@ -5,6 +5,7 @@ Feature: Google Search
     Given I am on Google
     When I search for "Edgewords"
     Then 'Edgewords' appears in the results
+
   @Ignore
   Scenario Outline: Data Drive search
     Given I am on Google
@@ -15,6 +16,9 @@ Feature: Google Search
       | search term |
       | Edgewords   |
       | BBC         |
+      | Onet        |
+      | gazeta      |
+      | apple       |
 
   Scenario: Verify Edgewords results
     Given I am on Google
