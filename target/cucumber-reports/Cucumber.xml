@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="17.092">
+    <testcase classname="Google Search" name="Search for edgewords" time="9.107">
+        <system-out>
+            <![CDATA[Given I am on Google........................................................passed
+When I search for "Edgewords"...............................................passed
+Then 'Edgewords' appears in the results.....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Google Search" name="Verify Edgewords results" time="7.677">
+        <system-out>
+            <![CDATA[Given I am on Google........................................................passed
+When I search for "Edgewords"...............................................passed
+Then I see in the results...................................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
