@@ -20,6 +20,7 @@ Feature: Google Search
       | gazeta      |
       | apple       |
       | google      |
+      | ukraine     |
 
   Scenario: Verify Edgewords results
     Given I am on Google
