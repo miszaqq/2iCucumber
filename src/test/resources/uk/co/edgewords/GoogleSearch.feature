@@ -21,6 +21,7 @@ Feature: Google Search
       | apple       |
       | google      |
       | ukraine     |
+      | pixel       |
 
   Scenario: Verify Edgewords results
     Given I am on Google
