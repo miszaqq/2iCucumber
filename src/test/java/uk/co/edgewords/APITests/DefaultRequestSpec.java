@@ -31,8 +31,19 @@ public class DefaultRequestSpec {
 
         String body = response.getBody().asString();
         MatcherAssert.assertThat(body, containsString("iPhone X"));
+
         int statusCode = response.statusCode();
         MatcherAssert.assertThat(statusCode, is(200));
+
         System.out.println("Response body => " + body);
+    }
+
+    @Test
+    void bddGetStaticWithSpec(){
+        when().get("/api/products/2")
+                .then().statusCode(200)
+                .statusLine("HTTP/1.1 200 OK")
+                .body("name", equalTo("iPhone X"))
+                .log().headers();
     }
 }

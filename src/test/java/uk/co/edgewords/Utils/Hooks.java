@@ -3,6 +3,7 @@ package uk.co.edgewords.Utils;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.restassured.RestAssured;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import uk.co.edgewords.SharedDictionary;
@@ -35,5 +36,11 @@ public class Hooks {
     @After("@Gui")
     public void TearDown() throws InterruptedException {
         driver.quit();
+    }
+
+    @Before("@API")
+    public void APISetup(){
+        var req = RestAssured.given().baseUri("http://localhost:2002");
+        sharedDict.addDict("apirequest", req);
     }
 }
