@@ -19,6 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.Matchers.containsString;
 //import static uk.co.edgewords.Utils.Hooks.driver;
 
 public class StepDefinitions {
