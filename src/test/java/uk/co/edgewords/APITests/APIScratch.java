@@ -33,8 +33,16 @@ public class APIScratch {
                 .when().get("/api/products")
                 .then().spec(responseSpecification)
                 .body("size()", Matchers.equalTo(3)) // 3 objects in array
-                .log().body();
+                .log().body()
         //Rest Assured uses Groovy's GPath notation
-        //https://github.com/rest-assured/rest-assured/wiki/Usage#example-1---json            .body("[0].name", Matchers.equalTo("iPad")); //0th object in array name property
+        //https://github.com/rest-assured/rest-assured/wiki/Usage#example-1---json
+                .body("[0].name", Matchers.equalTo("iPad")); //0th object in array name property
+    }
+
+    @Test
+    void jsonpath(){
+        RestAssured.given().baseUri("http://localhost:2002")
+                .when().get("/api/products/1")
+                .then().body("name", Matchers.equalTo("iPad"));
     }
 }
