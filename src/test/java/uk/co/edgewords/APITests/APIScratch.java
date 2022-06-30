@@ -17,6 +17,15 @@ public class APIScratch {
         var val = res.then();
         val.assertThat().statusCode(200).log().body();
 
+    }
+    @Test
+    void mine(){
+
+        //The TEST ABOVE can be done in one line
+        RestAssured
+                .given().baseUri("https://meedin3.pythonanywhere.com/")
+                .when().get("/").then()
+                .statusCode(200);
 
     }
 
